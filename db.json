@@ -1,0 +1,42 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "username": "admin",
+            "password": "admin",
+            "role": 1
+        },
+        {
+            "id": 1,
+            "username": "marko",
+            "password": "marko",
+            "role": 0
+        },
+        {
+            "id": 2,
+            "username": "stefana",
+            "password": "stefana",
+            "role": 0
+        }
+    ],
+    "photographers": [
+        {
+            "id": 0,
+            "firstName": "Stefana",
+            "lastName": "Cajetinac",
+            "scheduleId": 0,
+            "albumId": 0,
+            "rating": 0,
+            "image": ""
+        }
+    ],
+    "clients": [
+        {
+            "id": 0,
+            "firstName": "Marko",
+            "lastName": "Bozilovic",
+            "image": ""
+        }
+    ]
+
+}
