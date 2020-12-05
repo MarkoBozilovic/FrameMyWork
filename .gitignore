@@ -1,0 +1,4 @@
+# Files that will be ignored
+.DS_Store
+xcuserdata
+Teo4.xcodeproj/xcshareddata/
