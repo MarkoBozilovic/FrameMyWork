@@ -7,24 +7,85 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Outlets
     
-    @IBOutlet var loginBackgroundView: UIView!
+    @IBOutlet var backgroundView: UIView!
     @IBOutlet var errorLabel: UILabel!
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
 
-    // MARK: - Properties
+    // MARK: - LifeCycleFunctions
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        outletSetup()
+        setupOutlets()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func signInPressed() {
+        do {
+            let username = try ValidationService.validateUsername(username: usernameTextField.text)
+            let password = try ValidationService.validatePassword(password: passwordTextField.text)
+            
+            DataController.shared.login(username: username,
+                                        password: password) { (user) in
+                if let user = user {
+                    print(user.username)
+                } else {
+                    DispatchQueue.main.async {
+                        self.showError(LoginValidationError.incorrectCredentials)
+                    }
+                }
+            }
+        }
+        catch {
+            showError(error as! LoginValidationError)
+        }
+    }
+    
+    @IBAction func signUpPressed() {
+        
     }
     
     // MARK: - Functions
     
-    func outletSetup() {
-        loginBackgroundView.layer.cornerRadius = 30
-        loginBackgroundView.backgroundColor = UIColor(red: 250, green: 0, blue: 0, alpha: 0.1)
+    func setupOutlets() {
+        errorLabel.alpha = 0
+        backgroundView.layer.cornerRadius = 20
+        backgroundView.layer.shadowOpacity = 0.2
+        backgroundView.layer.shadowColor = UIColor.black.cgColor
+        backgroundView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        backgroundView.layer.shadowRadius = 20
+    }
+    
+    func showError(_ error: LoginValidationError) {
+        errorLabel.text = ValidationService.generateErrorMessage(for: error)
+        errorLabel.alpha = 1
+    }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            signInPressed()
+        }
+        return true
     }
 }
