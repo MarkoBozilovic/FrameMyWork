@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var signInButton: UIButton!
 
     // MARK: - LifeCycleFunctions
     
@@ -71,6 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         backgroundView.layer.shadowColor = UIColor.black.cgColor
         backgroundView.layer.shadowOffset = CGSize(width: 0, height: 0)
         backgroundView.layer.shadowRadius = 20
+        signInButton.layer.cornerRadius = 5
     }
     
     func showError(_ error: LoginValidationError) {

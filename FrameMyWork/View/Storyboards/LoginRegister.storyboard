@@ -63,7 +63,10 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgo-uN-xoA">
                                                 <rect key="frame" x="0.0" y="172.5" width="254" height="30"/>
-                                                <state key="normal" title="Sign in"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <state key="normal" title="Sign in">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="signInPressed" destination="Uq3-RJ-FLF" eventType="touchUpInside" id="9Q2-rK-vnE"/>
                                                 </connections>
@@ -104,6 +107,7 @@
                         <outlet property="backgroundView" destination="9r5-6q-g27" id="VlW-Sh-8MR"/>
                         <outlet property="errorLabel" destination="ymN-Fd-gwO" id="ShT-9M-gRQ"/>
                         <outlet property="passwordTextField" destination="nvC-6H-GN8" id="PlE-BY-gtF"/>
+                        <outlet property="signInButton" destination="Mgo-uN-xoA" id="VIS-3m-Tbd"/>
                         <outlet property="usernameTextField" destination="KtT-cz-zt1" id="sWg-d9-c36"/>
                     </connections>
                 </viewController>
@@ -113,6 +117,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
