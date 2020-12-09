@@ -10,7 +10,8 @@ import Foundation
 // MARK: - Enums
 
 enum LoginValidationError: LocalizedError {
-    case invalidValue
+    case noUsername
+    case noPassword
     case usernameTooShort
     case usernameTooLong
     case passwordTooLong
@@ -27,8 +28,10 @@ enum LoginValidationError: LocalizedError {
             return "Your password is too long."
         case .passwordTooShort:
             return "Your password is too short."
-        case .invalidValue:
-            return "Please enter your informations."
+        case .noUsername:
+            return "Please enter your username."
+        case .noPassword:
+            return "Please enter your password."
         case .incorrectCredentials:
             return "Invalid username and/or password"
         }
@@ -40,7 +43,7 @@ class ValidationService {
     
     static func validateUsername (username: String?) throws -> String {
         let username = username!
-        guard username.count != 0 else { throw LoginValidationError.invalidValue }
+        guard username.count != 0 else { throw LoginValidationError.noUsername }
         guard username.count >= 3 else { throw LoginValidationError.usernameTooShort }
         guard username.count < 20 else { throw LoginValidationError.usernameTooLong }
         return username
@@ -48,7 +51,7 @@ class ValidationService {
     
     static func validatePassword (password: String?) throws -> String {
         let password = password!
-        guard password.count != 0 else { throw LoginValidationError.invalidValue }
+        guard password.count != 0 else { throw LoginValidationError.noPassword }
         guard password.count >= 5 else { throw LoginValidationError.passwordTooShort }
         guard password.count < 20 else { throw LoginValidationError.passwordTooLong }
         return password
