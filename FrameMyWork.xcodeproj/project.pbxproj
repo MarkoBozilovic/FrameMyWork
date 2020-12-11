@@ -17,6 +17,9 @@
 		8F76B21C257BC75E00013EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F76B21A257BC75E00013EDF /* LaunchScreen.storyboard */; };
 		8F76B22C257BDC7900013EDF /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F76B22B257BDC7900013EDF /* LoginRegister.storyboard */; };
 		8F76B232257BE07F00013EDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76B231257BE07F00013EDF /* LoginViewController.swift */; };
+		8FC3D07F2583A6FA0041E575 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D07E2583A6FA0041E575 /* Photographer.swift */; };
+		8FC3D0822583A70F0041E575 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D0812583A70F0041E575 /* Member.swift */; };
+		8FC3D0852583A9850041E575 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D0842583A9850041E575 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		8F76B21D257BC75E00013EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F76B22B257BDC7900013EDF /* LoginRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginRegister.storyboard; sourceTree = "<group>"; };
 		8F76B231257BE07F00013EDF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8FC3D07E2583A6FA0041E575 /* Photographer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
+		8FC3D0812583A70F0041E575 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		8FC3D0842583A9850041E575 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +128,10 @@
 		8F76B229257BD2E200013EDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8FC3D0842583A9850041E575 /* Model.swift */,
 				8F38AB90257DF0B100BE9A41 /* User.swift */,
+				8FC3D07E2583A6FA0041E575 /* Photographer.swift */,
+				8FC3D0812583A70F0041E575 /* Member.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,9 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC3D07F2583A6FA0041E575 /* Photographer.swift in Sources */,
 				8F76B232257BE07F00013EDF /* LoginViewController.swift in Sources */,
 				8F38AB8E257D837900BE9A41 /* DataController +user.swift in Sources */,
 				8F38AB88257CA8DA00BE9A41 /* ValidationService +login.swift in Sources */,
+				8FC3D0822583A70F0041E575 /* Member.swift in Sources */,
+				8FC3D0852583A9850041E575 /* Model.swift in Sources */,
 				8F38AB83257C998A00BE9A41 /* DataController.swift in Sources */,
 				8F76B210257BC75C00013EDF /* AppDelegate.swift in Sources */,
 				8F76B212257BC75C00013EDF /* SceneDelegate.swift in Sources */,

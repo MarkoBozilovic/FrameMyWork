@@ -27,11 +27,19 @@ enum UserRole {
     }
 }
 
+protocol UserProfile {
+}
+
 class User {
+    // MARK: - Properties
+    
     var id: Int
     var username: String
     var password: String
     var role: Int
+    var profile: UserProfile? = nil
+    
+    // MARK: - Init
     
     init (_ dict: [String:Any] ){
         id = dict["id"] as! Int

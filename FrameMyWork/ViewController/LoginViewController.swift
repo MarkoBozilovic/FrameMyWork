@@ -16,7 +16,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var signInButton: UIButton!
 
-
     // MARK: - LifeCycleFunctions
     
     override func viewDidLoad() {
@@ -47,7 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             DataController.shared.login(username: username,
                                         password: password) { (user) in
                 if let user = user {
-                    print(user.username)
+                    print("radi")
                 } else {
                     DispatchQueue.main.async {
                         self.showError(LoginValidationError.incorrectCredentials)

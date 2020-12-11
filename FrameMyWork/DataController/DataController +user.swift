@@ -23,6 +23,7 @@ extension DataController {
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:Any]]
                 guard jsonData.count > 0 else { return completion(nil) }
                 let user = jsonData.first.map { User($0) }!
+                Model.shared.user = user
                 completion(user)
             }
             catch {
