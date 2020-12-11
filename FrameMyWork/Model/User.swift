@@ -7,6 +7,26 @@
 
 import Foundation
 
+enum UserRole {
+    case admin
+    case member
+    case photographer
+    case unknow
+    
+    init(role: Int) {
+        switch role {
+        case 0:
+            self = .admin
+        case 1:
+            self = .member
+        case 2:
+            self = .photographer
+        default:
+            self = .unknow
+        }
+    }
+}
+
 class User {
     var id: Int
     var username: String
