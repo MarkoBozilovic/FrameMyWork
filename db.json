@@ -4,19 +4,21 @@
             "id": 0,
             "username": "admin",
             "password": "admin",
-            "role": 1
+            "role": 2
         },
         {
             "id": 1,
             "username": "marko",
             "password": "marko",
-            "role": 0
+            "role": 0,
+            "memberId": 0
         },
         {
             "id": 2,
             "username": "stefana",
             "password": "stefana",
-            "role": 0
+            "role": 1,
+            "photographerId": 0
         }
     ],
     "photographers": [
@@ -27,15 +29,15 @@
             "scheduleId": 0,
             "albumId": 0,
             "rating": 0,
-            "image": ""
+            "profileImage": ""
         }
     ],
-    "clients": [
+    "members": [
         {
             "id": 0,
             "firstName": "Marko",
             "lastName": "Bozilovic",
-            "image": ""
+            "profileImage": ""
         }
     ]
 
