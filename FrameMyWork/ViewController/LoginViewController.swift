@@ -44,9 +44,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let password = try ValidationService.validatePassword(password: passwordTextField.text)
             
             DataController.shared.login(username: username,
-                                        password: password) { (user) in
-                if let user = user {
-                    print("radi")
+                                        password: password) { (success) in
+                if success {
+                    print(Model.shared.user!.username)
                 } else {
                     DispatchQueue.main.async {
                         self.showError(LoginValidationError.incorrectCredentials)

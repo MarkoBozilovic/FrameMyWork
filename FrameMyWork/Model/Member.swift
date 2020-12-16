@@ -17,7 +17,7 @@ class Member: UserProfile {
     
     //MARK: - Init
     
-    init (dict: [String:Any]) {
+    init (_ dict: [String:Any]) {
         id = dict["id"] as! Int
         firstName = dict["firstName"] as! String
         lastName = dict["lastName"] as! String
