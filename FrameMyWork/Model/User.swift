@@ -15,11 +15,11 @@ enum UserRole {
     
     init(role: Int) {
         switch role {
-        case 0:
-            self = .admin
-        case 1:
-            self = .member
         case 2:
+            self = .admin
+        case 0:
+            self = .member
+        case 1:
             self = .photographer
         default:
             self = .unknow
@@ -27,16 +27,29 @@ enum UserRole {
     }
 }
 
+protocol UserProfile {
+    var id: Int { get }
+    var firstName: String { get }
+    var lastName: String { get }
+    var profileImage: String { get }
+}
+
 class User {
+    // MARK: - Properties
+    
     var id: Int
     var username: String
     var password: String
-    var role: Int
+    var role: UserRole
+    var profile: UserProfile? = nil
+    
+    // MARK: - Init
     
     init (_ dict: [String:Any] ){
         id = dict["id"] as! Int
         username = dict["username"] as! String
         password = dict["password"] as! String
-        role = dict["role"] as! Int
+        let roleId = dict["role"] as! Int
+        role = UserRole(role: roleId)
     }
 }
