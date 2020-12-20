@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="10h-J0-8xb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ccT-fs-MVL">
+            <objects>
+                <tabBarController id="10h-J0-8xb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hiM-p2-YY8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EzD-1g-229" kind="relationship" relationship="viewControllers" id="QJO-qC-5AV"/>
+                        <segue destination="IYh-oS-kd3" kind="relationship" relationship="viewControllers" id="2VH-zw-xYH"/>
+                        <segue destination="6GA-46-88t" kind="relationship" relationship="viewControllers" id="vVz-Ie-A7Q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ow-i2-mpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849" y="264"/>
+        </scene>
+        <!--Photographer +Schedule-->
+        <scene sceneID="R7Y-c1-2ga">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photographer +Schedule" id="EzD-1g-229" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="calendar" catalog="system" id="JTN-rE-vyC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0y-Za-PNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="135"/>
+        </scene>
+        <!--Photographer +Messages-->
+        <scene sceneID="X0W-W3-xM0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photographer +Messages" id="IYh-oS-kd3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messages" image="message" catalog="system" id="t14-G3-OMj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BK3-oR-nvv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="264"/>
+        </scene>
+        <!--Photographer +Profile-->
+        <scene sceneID="Yax-lY-Fji">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photographer +Profile" id="6GA-46-88t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="3ez-1d-YdI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXu-I7-qUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
+</document>
