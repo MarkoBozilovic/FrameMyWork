@@ -20,6 +20,14 @@
 		8FC3D07F2583A6FA0041E575 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D07E2583A6FA0041E575 /* Photographer.swift */; };
 		8FC3D0822583A70F0041E575 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D0812583A70F0041E575 /* Member.swift */; };
 		8FC3D0852583A9850041E575 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D0842583A9850041E575 /* Model.swift */; };
+		8FE3B9DC258FA45F008BB989 /* Photographer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE3B9DB258FA45F008BB989 /* Photographer.storyboard */; };
+		8FE3B9E0258FA6A4008BB989 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9DF258FA6A4008BB989 /* Utils.swift */; };
+		8FE3B9E4258FE23F008BB989 /* Photographer +Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE3B9E3258FE23F008BB989 /* Photographer +Schedule.storyboard */; };
+		8FE3B9E7258FE266008BB989 /* Photographer +Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE3B9E6258FE266008BB989 /* Photographer +Profile.storyboard */; };
+		8FE3B9EA258FE27B008BB989 /* Photographer +Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE3B9E9258FE27B008BB989 /* Photographer +Messages.storyboard */; };
+		8FE3B9ED258FE63D008BB989 /* PhotographerScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9EC258FE63D008BB989 /* PhotographerScheduleViewController.swift */; };
+		8FE3B9F0258FE656008BB989 /* PhotographerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9EF258FE656008BB989 /* PhotographerProfileViewController.swift */; };
+		8FE3B9F3258FE66C008BB989 /* PhotographerMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9F2258FE66C008BB989 /* PhotographerMessagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,14 @@
 		8FC3D07E2583A6FA0041E575 /* Photographer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
 		8FC3D0812583A70F0041E575 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		8FC3D0842583A9850041E575 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8FE3B9DB258FA45F008BB989 /* Photographer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photographer.storyboard; sourceTree = "<group>"; };
+		8FE3B9DF258FA6A4008BB989 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8FE3B9E3258FE23F008BB989 /* Photographer +Schedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Photographer +Schedule.storyboard"; sourceTree = "<group>"; };
+		8FE3B9E6258FE266008BB989 /* Photographer +Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Photographer +Profile.storyboard"; sourceTree = "<group>"; };
+		8FE3B9E9258FE27B008BB989 /* Photographer +Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Photographer +Messages.storyboard"; sourceTree = "<group>"; };
+		8FE3B9EC258FE63D008BB989 /* PhotographerScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerScheduleViewController.swift; sourceTree = "<group>"; };
+		8FE3B9EF258FE656008BB989 /* PhotographerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerProfileViewController.swift; sourceTree = "<group>"; };
+		8FE3B9F2258FE66C008BB989 /* PhotographerMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerMessagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,7 @@
 		8F76B20E257BC75C00013EDF /* FrameMyWork */ = {
 			isa = PBXGroup;
 			children = (
+				8FE3B9DE258FA672008BB989 /* Helpers */,
 				8F38AB86257CA8B200BE9A41 /* ValidationService */,
 				8F38AB81257C994800BE9A41 /* DataController */,
 				8F76B229257BD2E200013EDF /* Model */,
@@ -105,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8F76B231257BE07F00013EDF /* LoginViewController.swift */,
+				8FE3B9F5258FE6A2008BB989 /* Photographer */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -121,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				8F76B22B257BDC7900013EDF /* LoginRegister.storyboard */,
+				8FE3B9F7258FE724008BB989 /* Photographer */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -134,6 +153,35 @@
 				8FC3D0812583A70F0041E575 /* Member.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8FE3B9DE258FA672008BB989 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3B9DF258FA6A4008BB989 /* Utils.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8FE3B9F5258FE6A2008BB989 /* Photographer */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3B9EC258FE63D008BB989 /* PhotographerScheduleViewController.swift */,
+				8FE3B9EF258FE656008BB989 /* PhotographerProfileViewController.swift */,
+				8FE3B9F2258FE66C008BB989 /* PhotographerMessagesViewController.swift */,
+			);
+			path = Photographer;
+			sourceTree = "<group>";
+		};
+		8FE3B9F7258FE724008BB989 /* Photographer */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3B9DB258FA45F008BB989 /* Photographer.storyboard */,
+				8FE3B9E3258FE23F008BB989 /* Photographer +Schedule.storyboard */,
+				8FE3B9E6258FE266008BB989 /* Photographer +Profile.storyboard */,
+				8FE3B9E9258FE27B008BB989 /* Photographer +Messages.storyboard */,
+			);
+			path = Photographer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE3B9EA258FE27B008BB989 /* Photographer +Messages.storyboard in Resources */,
+				8FE3B9E4258FE23F008BB989 /* Photographer +Schedule.storyboard in Resources */,
 				8F76B21C257BC75E00013EDF /* LaunchScreen.storyboard in Resources */,
+				8FE3B9E7258FE266008BB989 /* Photographer +Profile.storyboard in Resources */,
+				8FE3B9DC258FA45F008BB989 /* Photographer.storyboard in Resources */,
 				8F76B22C257BDC7900013EDF /* LoginRegister.storyboard in Resources */,
 				8F76B219257BC75E00013EDF /* Assets.xcassets in Resources */,
 			);
@@ -208,11 +260,15 @@
 			files = (
 				8FC3D07F2583A6FA0041E575 /* Photographer.swift in Sources */,
 				8F76B232257BE07F00013EDF /* LoginViewController.swift in Sources */,
+				8FE3B9F0258FE656008BB989 /* PhotographerProfileViewController.swift in Sources */,
 				8F38AB8E257D837900BE9A41 /* DataController +user.swift in Sources */,
 				8F38AB88257CA8DA00BE9A41 /* ValidationService +login.swift in Sources */,
 				8FC3D0822583A70F0041E575 /* Member.swift in Sources */,
 				8FC3D0852583A9850041E575 /* Model.swift in Sources */,
+				8FE3B9ED258FE63D008BB989 /* PhotographerScheduleViewController.swift in Sources */,
 				8F38AB83257C998A00BE9A41 /* DataController.swift in Sources */,
+				8FE3B9F3258FE66C008BB989 /* PhotographerMessagesViewController.swift in Sources */,
+				8FE3B9E0258FA6A4008BB989 /* Utils.swift in Sources */,
 				8F76B210257BC75C00013EDF /* AppDelegate.swift in Sources */,
 				8F76B212257BC75C00013EDF /* SceneDelegate.swift in Sources */,
 				8F38AB91257DF0B100BE9A41 /* User.swift in Sources */,

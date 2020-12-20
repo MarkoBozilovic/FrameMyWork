@@ -46,7 +46,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             DataController.shared.login(username: username,
                                         password: password) { (success) in
                 if success {
-                    print(Model.shared.user!.username)
+                    switch Model.shared.user?.role {
+                    case .photographer:
+                            presentStoryboard("Photographer")
+                    default:
+                            assertionFailure("Not Photographer")
+                    }
                 } else {
                     DispatchQueue.main.async {
                         self.showError(LoginValidationError.incorrectCredentials)
