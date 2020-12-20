@@ -35,18 +35,24 @@ extension DataController {
                     let id = jsonDict["photographerId"] as! Int
                     endpoint = "photographers/?id=\(id)"
                 default:
-                    completion(true)
+                    DispatchQueue.main.async {
+                        completion(true)
+                    }
                 }
                 self.getProfile(endpoint: endpoint,
                                 userRole: user.role) { (profile) in
                     if profile != nil {
-                        Model.shared.user?.profile = profile
-                        completion(true)
+                        DispatchQueue.main.async {
+                            Model.shared.user?.profile = profile
+                            completion(true)
+                        }
                     }
                 }
             }
             catch {
-                completion(false)
+                DispatchQueue.main.async {
+                    completion(false)
+                }
             }
         }
     }
