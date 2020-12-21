@@ -15,13 +15,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var signInButton: UIButton!
+    @IBOutlet var signUpButton: UIButton!
+    
+    @IBOutlet var registerBackgroundView: UIView!
+    @IBOutlet var registerAsPhotographer: UIButton!
+    @IBOutlet var registerAsMember: UIButton!
 
     // MARK: - LifeCycleFunctions
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupOutlets()
+        setupLoginOutlets()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,20 +71,45 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpPressed() {
-        
+        view.addSubview(registerBackgroundView)
+        registerBackgroundView.center = view.center
+        setupRegisterOutlets()
+        signUpButton.alpha = 0
+    }
+    
+    @IBAction func backToLogIn() {
+      
+    }
+    
+    @IBAction func photographerRegisterPressed() {
+        performSegue(withIdentifier: "registerPhotographer", sender: nil)
+    }
+    
+    @IBAction func memberRegisterPressed() {
+        performSegue(withIdentifier: "registerMember", sender: nil)
     }
     
     // MARK: - Functions
     
-    func setupOutlets() {
+    func setupLoginOutlets() {
         errorLabel.alpha = 0
-        backgroundView.layer.cornerRadius = 20
-        backgroundView.layer.shadowOpacity = 0.2
-        backgroundView.layer.shadowColor = UIColor.black.cgColor
-        backgroundView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        backgroundView.layer.shadowRadius = 20
-        signInButton.layer.cornerRadius = 5
-
+        setupButtons(button: signInButton)
+        setupViewBackgroundOutlets(background: backgroundView)
+        
+        registerBackgroundView.alpha = 0
+        registerAsMember.alpha = 0
+        registerAsPhotographer.alpha = 0
+    }
+    
+    func setupRegisterOutlets() {
+        registerBackgroundView.alpha = 1
+        registerAsMember.alpha = 1
+        registerAsPhotographer.alpha = 1
+        backgroundView.alpha = 0
+        setupButtons(button: registerAsMember)
+        setupButtons(button: registerAsPhotographer)
+        
+        setupViewBackgroundOutlets(background: registerBackgroundView)
     }
     
     func showError(_ error: LoginValidationError) {
