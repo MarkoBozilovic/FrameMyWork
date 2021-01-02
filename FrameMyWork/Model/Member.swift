@@ -8,14 +8,14 @@
 import Foundation
 
 class Member: UserProfile {
-    //MARK: - Properties
+    // MARK: - Properties
     
     var id: Int
     var firstName: String
     var lastName: String
     var profileImage: String
     
-    //MARK: - Init
+    // MARK: - Init
     
     init (_ dict: [String:Any]) {
         id = dict["id"] as! Int

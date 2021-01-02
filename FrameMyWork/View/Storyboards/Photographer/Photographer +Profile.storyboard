@@ -20,7 +20,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="s0i-df-T4g">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="ifW-5g-msf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="ifW-5g-msf">
+                            <connections>
+                                <segue destination="LN2-7l-5Pi" kind="presentation" id="oNq-LX-ssv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSe-bD-VXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -46,8 +50,49 @@
             </objects>
             <point key="canvasLocation" x="161" y="931"/>
         </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="abU-KU-Qd8">
+            <objects>
+                <viewController id="LN2-7l-5Pi" customClass="NotificationViewController" customModule="FrameMyWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UXh-TW-rl6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No notifications" translatesAutoresizingMaskIntoConstraints="NO" id="sRO-rg-gxd">
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="l0v-cr-WyV"/>
+                                    <constraint firstAttribute="height" constant="200" id="ucu-P4-kUW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notifications, yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-f1-tmA">
+                                <rect key="frame" x="124" y="536" width="166" height="21.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eyb-G6-m9C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bQV-f1-tmA" firstAttribute="centerX" secondItem="UXh-TW-rl6" secondAttribute="centerX" id="Neo-H7-cmg"/>
+                            <constraint firstItem="sRO-rg-gxd" firstAttribute="centerX" secondItem="UXh-TW-rl6" secondAttribute="centerX" id="emT-xC-h0b"/>
+                            <constraint firstItem="bQV-f1-tmA" firstAttribute="top" secondItem="sRO-rg-gxd" secondAttribute="bottom" constant="15" id="hrR-Eb-RZv"/>
+                            <constraint firstItem="sRO-rg-gxd" firstAttribute="centerY" secondItem="UXh-TW-rl6" secondAttribute="centerY" id="lLK-jb-YBT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyStateImageView" destination="sRO-rg-gxd" id="EJj-7c-bfb"/>
+                        <outlet property="emptyStateLabel" destination="bQV-f1-tmA" id="caj-mi-Drc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Frl-wb-QZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968" y="931"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="No notifications" width="112" height="112"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">

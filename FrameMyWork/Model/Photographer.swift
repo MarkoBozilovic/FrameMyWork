@@ -8,7 +8,7 @@
 import Foundation
 
 class Photographer: UserProfile {
-    //MARK: - Properties
+    // MARK: - Properties
     
     var id: Int
     var firstName: String
@@ -18,7 +18,7 @@ class Photographer: UserProfile {
     var albumId: Int
     var rating: Int
     
-    //MARK: - Init
+    // MARK: - Init
     
     init (_ dict: [String:Any]) {
         id = dict["id"] as! Int

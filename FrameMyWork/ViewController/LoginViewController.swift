@@ -48,9 +48,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if success {
                     switch Model.shared.user?.role {
                     case .photographer:
-                            presentStoryboard("Photographer")
+                        presentStoryboard("Photographer")
+                    case .member:
+                        presentStoryboard("Member")
                     default:
-                            assertionFailure("Not Photographer")
+                        assertionFailure("error presenting screen")
                     }
                 } else {
                     DispatchQueue.main.async {
