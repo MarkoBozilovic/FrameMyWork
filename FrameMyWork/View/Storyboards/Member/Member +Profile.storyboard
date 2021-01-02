@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5bh-e3-nQZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="HwP-ME-Uzg">
+            <objects>
+                <viewController id="9HJ-g5-VNv" customClass="MemberProfileViewController" customModule="FrameMyWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RDO-Cn-cqz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="n2j-c7-UGS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="IAi-LM-T6N">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="6Dq-KT-fc0">
+                            <connections>
+                                <segue destination="WC2-iY-8RZ" kind="presentation" id="Gh3-JB-DVY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EG-oD-5Ox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.6956521739131" y="89.732142857142847"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="LbI-7I-xxq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bh-e3-nQZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="chp-mV-KZb"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HKA-5z-7of">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9HJ-g5-VNv" kind="relationship" relationship="rootViewController" id="pT6-EM-enM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMm-pa-lt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.550724637681171" y="89.732142857142847"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="AYE-pE-zKe">
+            <objects>
+                <viewController id="WC2-iY-8RZ" customClass="NotificationViewController" customModule="FrameMyWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0u5-EF-Wwg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No notifications" translatesAutoresizingMaskIntoConstraints="NO" id="5X3-ok-kec">
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Pze-dd-nwU"/>
+                                    <constraint firstAttribute="height" constant="200" id="qDj-k3-EKC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notifications, yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmu-Bx-vjX">
+                                <rect key="frame" x="124" y="536" width="166" height="21.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aHD-lR-21e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lmu-Bx-vjX" firstAttribute="top" secondItem="5X3-ok-kec" secondAttribute="bottom" constant="15" id="SVo-VX-0VT"/>
+                            <constraint firstItem="5X3-ok-kec" firstAttribute="centerY" secondItem="0u5-EF-Wwg" secondAttribute="centerY" id="hWe-Ke-R8n"/>
+                            <constraint firstItem="Lmu-Bx-vjX" firstAttribute="centerX" secondItem="0u5-EF-Wwg" secondAttribute="centerX" id="lsz-Zh-9mX"/>
+                            <constraint firstItem="5X3-ok-kec" firstAttribute="centerX" secondItem="0u5-EF-Wwg" secondAttribute="centerX" id="tjW-Y4-NmD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyStateImageView" destination="5X3-ok-kec" id="nmI-at-19e"/>
+                        <outlet property="emptyStateLabel" destination="Lmu-Bx-vjX" id="s0a-FQ-aHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ho-yH-pAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="No notifications" width="112" height="112"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -17,6 +17,14 @@
 		8F76B21C257BC75E00013EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F76B21A257BC75E00013EDF /* LaunchScreen.storyboard */; };
 		8F76B22C257BDC7900013EDF /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F76B22B257BDC7900013EDF /* LoginRegister.storyboard */; };
 		8F76B232257BE07F00013EDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76B231257BE07F00013EDF /* LoginViewController.swift */; };
+		8F8AE0D025A0A05B007B3AC0 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8AE0CF25A0A05B007B3AC0 /* NotificationViewController.swift */; };
+		8F8AE0D325A0A4B9007B3AC0 /* Member.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8AE0D225A0A4B9007B3AC0 /* Member.storyboard */; };
+		8F8AE0D825A0A728007B3AC0 /* Member +Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8AE0D725A0A728007B3AC0 /* Member +Search.storyboard */; };
+		8F8AE0DB25A0A7FA007B3AC0 /* Member +Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8AE0DA25A0A7FA007B3AC0 /* Member +Messages.storyboard */; };
+		8F8AE0DE25A0A85C007B3AC0 /* Member +Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8AE0DD25A0A85C007B3AC0 /* Member +Profile.storyboard */; };
+		8F8AE0E725A0AD26007B3AC0 /* MemberSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8AE0E625A0AD26007B3AC0 /* MemberSearchViewController.swift */; };
+		8F8AE0EA25A0AD46007B3AC0 /* MemberMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8AE0E925A0AD46007B3AC0 /* MemberMessagesViewController.swift */; };
+		8F8AE0ED25A0AD59007B3AC0 /* MemberProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8AE0EC25A0AD59007B3AC0 /* MemberProfileViewController.swift */; };
 		8FC3D07F2583A6FA0041E575 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D07E2583A6FA0041E575 /* Photographer.swift */; };
 		8FC3D0822583A70F0041E575 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D0812583A70F0041E575 /* Member.swift */; };
 		8FC3D0852583A9850041E575 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3D0842583A9850041E575 /* Model.swift */; };
@@ -43,6 +51,14 @@
 		8F76B21D257BC75E00013EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F76B22B257BDC7900013EDF /* LoginRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginRegister.storyboard; sourceTree = "<group>"; };
 		8F76B231257BE07F00013EDF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8F8AE0CF25A0A05B007B3AC0 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		8F8AE0D225A0A4B9007B3AC0 /* Member.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Member.storyboard; sourceTree = "<group>"; };
+		8F8AE0D725A0A728007B3AC0 /* Member +Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Member +Search.storyboard"; sourceTree = "<group>"; };
+		8F8AE0DA25A0A7FA007B3AC0 /* Member +Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Member +Messages.storyboard"; sourceTree = "<group>"; };
+		8F8AE0DD25A0A85C007B3AC0 /* Member +Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Member +Profile.storyboard"; sourceTree = "<group>"; };
+		8F8AE0E625A0AD26007B3AC0 /* MemberSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSearchViewController.swift; sourceTree = "<group>"; };
+		8F8AE0E925A0AD46007B3AC0 /* MemberMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberMessagesViewController.swift; sourceTree = "<group>"; };
+		8F8AE0EC25A0AD59007B3AC0 /* MemberProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfileViewController.swift; sourceTree = "<group>"; };
 		8FC3D07E2583A6FA0041E575 /* Photographer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
 		8FC3D0812583A70F0041E575 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		8FC3D0842583A9850041E575 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -122,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				8F76B231257BE07F00013EDF /* LoginViewController.swift */,
+				8F8AE0CF25A0A05B007B3AC0 /* NotificationViewController.swift */,
+				8F8AE0E425A0ACFA007B3AC0 /* Member */,
 				8FE3B9F5258FE6A2008BB989 /* Photographer */,
 			);
 			path = ViewController;
@@ -139,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				8F76B22B257BDC7900013EDF /* LoginRegister.storyboard */,
+				8F8AE0D525A0A4C7007B3AC0 /* Member */,
 				8FE3B9F7258FE724008BB989 /* Photographer */,
 			);
 			path = Storyboards;
@@ -155,6 +174,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8F8AE0D525A0A4C7007B3AC0 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				8F8AE0D225A0A4B9007B3AC0 /* Member.storyboard */,
+				8F8AE0D725A0A728007B3AC0 /* Member +Search.storyboard */,
+				8F8AE0DA25A0A7FA007B3AC0 /* Member +Messages.storyboard */,
+				8F8AE0DD25A0A85C007B3AC0 /* Member +Profile.storyboard */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		8F8AE0E425A0ACFA007B3AC0 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				8F8AE0E625A0AD26007B3AC0 /* MemberSearchViewController.swift */,
+				8F8AE0E925A0AD46007B3AC0 /* MemberMessagesViewController.swift */,
+				8F8AE0EC25A0AD59007B3AC0 /* MemberProfileViewController.swift */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
 		8FE3B9DE258FA672008BB989 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,8 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				8FE3B9EC258FE63D008BB989 /* PhotographerScheduleViewController.swift */,
-				8FE3B9EF258FE656008BB989 /* PhotographerProfileViewController.swift */,
 				8FE3B9F2258FE66C008BB989 /* PhotographerMessagesViewController.swift */,
+				8FE3B9EF258FE656008BB989 /* PhotographerProfileViewController.swift */,
 			);
 			path = Photographer;
 			sourceTree = "<group>";
@@ -178,8 +218,8 @@
 			children = (
 				8FE3B9DB258FA45F008BB989 /* Photographer.storyboard */,
 				8FE3B9E3258FE23F008BB989 /* Photographer +Schedule.storyboard */,
-				8FE3B9E6258FE266008BB989 /* Photographer +Profile.storyboard */,
 				8FE3B9E9258FE27B008BB989 /* Photographer +Messages.storyboard */,
+				8FE3B9E6258FE266008BB989 /* Photographer +Profile.storyboard */,
 			);
 			path = Photographer;
 			sourceTree = "<group>";
@@ -241,7 +281,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8AE0D325A0A4B9007B3AC0 /* Member.storyboard in Resources */,
+				8F8AE0DB25A0A7FA007B3AC0 /* Member +Messages.storyboard in Resources */,
 				8FE3B9EA258FE27B008BB989 /* Photographer +Messages.storyboard in Resources */,
+				8F8AE0D825A0A728007B3AC0 /* Member +Search.storyboard in Resources */,
+				8F8AE0DE25A0A85C007B3AC0 /* Member +Profile.storyboard in Resources */,
 				8FE3B9E4258FE23F008BB989 /* Photographer +Schedule.storyboard in Resources */,
 				8F76B21C257BC75E00013EDF /* LaunchScreen.storyboard in Resources */,
 				8FE3B9E7258FE266008BB989 /* Photographer +Profile.storyboard in Resources */,
@@ -258,13 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8AE0E725A0AD26007B3AC0 /* MemberSearchViewController.swift in Sources */,
 				8FC3D07F2583A6FA0041E575 /* Photographer.swift in Sources */,
+				8F8AE0ED25A0AD59007B3AC0 /* MemberProfileViewController.swift in Sources */,
 				8F76B232257BE07F00013EDF /* LoginViewController.swift in Sources */,
 				8FE3B9F0258FE656008BB989 /* PhotographerProfileViewController.swift in Sources */,
 				8F38AB8E257D837900BE9A41 /* DataController +user.swift in Sources */,
 				8F38AB88257CA8DA00BE9A41 /* ValidationService +login.swift in Sources */,
+				8F8AE0D025A0A05B007B3AC0 /* NotificationViewController.swift in Sources */,
 				8FC3D0822583A70F0041E575 /* Member.swift in Sources */,
 				8FC3D0852583A9850041E575 /* Model.swift in Sources */,
+				8F8AE0EA25A0AD46007B3AC0 /* MemberMessagesViewController.swift in Sources */,
 				8FE3B9ED258FE63D008BB989 /* PhotographerScheduleViewController.swift in Sources */,
 				8F38AB83257C998A00BE9A41 /* DataController.swift in Sources */,
 				8FE3B9F3258FE66C008BB989 /* PhotographerMessagesViewController.swift in Sources */,

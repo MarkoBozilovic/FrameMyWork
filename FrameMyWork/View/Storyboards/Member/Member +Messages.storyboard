@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wUA-jd-o61">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages-->
+        <scene sceneID="5l3-OZ-o8l">
+            <objects>
+                <viewController id="ZoK-yd-bb2" customClass="MemberMessagesViewController" customModule="FrameMyWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PUE-pF-8LI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No messages, yet!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHW-l8-TcK">
+                                <rect key="frame" x="133" y="563" width="148.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No comments" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-wd-7e6">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Sni-3D-FS5"/>
+                                    <constraint firstAttribute="height" constant="200" id="k9L-IH-YhU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wRn-Jp-9Py"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KHW-l8-TcK" firstAttribute="centerX" secondItem="PUE-pF-8LI" secondAttribute="centerX" id="2Nn-nR-zyR"/>
+                            <constraint firstItem="b5E-wd-7e6" firstAttribute="centerX" secondItem="PUE-pF-8LI" secondAttribute="centerX" id="M9b-Df-jjG"/>
+                            <constraint firstItem="b5E-wd-7e6" firstAttribute="centerY" secondItem="PUE-pF-8LI" secondAttribute="centerY" id="NBX-UR-x8E"/>
+                            <constraint firstItem="KHW-l8-TcK" firstAttribute="top" secondItem="b5E-wd-7e6" secondAttribute="bottom" constant="15" id="boI-rl-ipr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Messages" id="Tbt-Ko-DYW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="wtq-pK-NrN">
+                            <connections>
+                                <segue destination="vrR-fe-Rsy" kind="presentation" id="2NP-cb-eiq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9N-wv-wVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.85507246376812" y="20.758928571428569"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="T7O-G6-1kH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wUA-jd-o61" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messages" image="message" catalog="system" id="bUq-Sc-5PT"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iqj-O1-6Q9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZoK-yd-bb2" kind="relationship" relationship="rootViewController" id="wf6-YE-ny2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8O-0I-i0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120.28985507246378" y="20.758928571428569"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="4Gl-Po-YAx">
+            <objects>
+                <viewController id="vrR-fe-Rsy" customClass="NotificationViewController" customModule="FrameMyWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ayU-5E-Wmq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No notifications" translatesAutoresizingMaskIntoConstraints="NO" id="esF-RQ-Jy4">
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Cpa-om-JX0"/>
+                                    <constraint firstAttribute="height" constant="200" id="FwZ-uf-3w6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notifications, yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-9a-w0I">
+                                <rect key="frame" x="124" y="536" width="166" height="21.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SwT-Kc-27S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="esF-RQ-Jy4" firstAttribute="centerY" secondItem="ayU-5E-Wmq" secondAttribute="centerY" id="Izg-Ix-JqX"/>
+                            <constraint firstItem="esF-RQ-Jy4" firstAttribute="centerX" secondItem="ayU-5E-Wmq" secondAttribute="centerX" id="dca-sT-N9b"/>
+                            <constraint firstItem="T3M-9a-w0I" firstAttribute="top" secondItem="esF-RQ-Jy4" secondAttribute="bottom" constant="15" id="mle-JZ-Spy"/>
+                            <constraint firstItem="T3M-9a-w0I" firstAttribute="centerX" secondItem="ayU-5E-Wmq" secondAttribute="centerX" id="vQy-DK-cpu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyStateImageView" destination="esF-RQ-Jy4" id="5fd-uR-t6d"/>
+                        <outlet property="emptyStateLabel" destination="T3M-9a-w0I" id="iax-sQ-ZbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bL-wf-2q6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="No comments" width="112" height="112"/>
+        <image name="No notifications" width="112" height="112"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

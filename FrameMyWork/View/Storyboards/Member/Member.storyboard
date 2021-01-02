@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vdC-2G-Iv2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Member +Search-->
+        <scene sceneID="eyk-Xa-bnJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Member +Search" id="aer-Q3-JIT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="5im-D7-Pti"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRF-jc-NFO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-90"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eZe-Ib-BqY">
+            <objects>
+                <tabBarController id="vdC-2G-Iv2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FyH-8K-xCA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aer-Q3-JIT" kind="relationship" relationship="viewControllers" id="4t5-LA-f1e"/>
+                        <segue destination="B0L-Oj-Iea" kind="relationship" relationship="viewControllers" id="s4o-Z5-zDy"/>
+                        <segue destination="Q3u-xb-heE" kind="relationship" relationship="viewControllers" id="2kE-q6-eGi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbG-wq-Iu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-545" y="60"/>
+        </scene>
+        <!--Member +Messages-->
+        <scene sceneID="Lcb-Va-Pjr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Member +Messages" id="B0L-Oj-Iea" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messages" image="message" catalog="system" id="Ma6-sg-5Fl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkj-PN-5Ea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="60"/>
+        </scene>
+        <!--Member +Profile-->
+        <scene sceneID="mSc-uO-OuZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Member +Profile" id="Q3u-xb-heE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="IrZ-lz-tC7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJ1-qc-4RO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="205"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
+</document>

@@ -16,16 +16,80 @@
                     <view key="view" contentMode="scaleToFill" id="lET-mO-KbB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No comments" translatesAutoresizingMaskIntoConstraints="NO" id="7Ih-v2-zT2">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="baj-D8-nkM"/>
+                                    <constraint firstAttribute="width" constant="200" id="vRQ-Ti-qkJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No messages, yet!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8D-na-0NO">
+                                <rect key="frame" x="133" y="563" width="148.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LKv-Yd-CBX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ih-v2-zT2" firstAttribute="centerX" secondItem="lET-mO-KbB" secondAttribute="centerX" id="G7L-pi-sGw"/>
+                            <constraint firstItem="W8D-na-0NO" firstAttribute="top" secondItem="7Ih-v2-zT2" secondAttribute="bottom" constant="15" id="JQW-dI-0qA"/>
+                            <constraint firstItem="7Ih-v2-zT2" firstAttribute="centerY" secondItem="lET-mO-KbB" secondAttribute="centerY" id="LIc-bo-eGV"/>
+                            <constraint firstItem="W8D-na-0NO" firstAttribute="centerX" secondItem="lET-mO-KbB" secondAttribute="centerX" id="aXc-T5-Ht5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="7Eq-ik-RXS">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="AWo-xM-b2O"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="AWo-xM-b2O">
+                            <connections>
+                                <segue destination="URe-n8-zZM" kind="presentation" id="hvZ-JB-4V3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Io8-p9-6dQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="263.83928571428572"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="7dA-4k-9ME">
+            <objects>
+                <viewController id="URe-n8-zZM" customClass="NotificationViewController" customModule="FrameMyWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pj2-sA-jbd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No notifications" translatesAutoresizingMaskIntoConstraints="NO" id="V3X-kA-gpK">
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KlB-Va-YTb"/>
+                                    <constraint firstAttribute="height" constant="200" id="LOa-7L-ZhQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notifications, yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qep-mi-Hub">
+                                <rect key="frame" x="124" y="536" width="166" height="21.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ebO-Yu-vbI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V3X-kA-gpK" firstAttribute="centerX" secondItem="pj2-sA-jbd" secondAttribute="centerX" id="YQi-D0-D4w"/>
+                            <constraint firstItem="V3X-kA-gpK" firstAttribute="centerY" secondItem="pj2-sA-jbd" secondAttribute="centerY" id="cHr-k7-dff"/>
+                            <constraint firstItem="Qep-mi-Hub" firstAttribute="top" secondItem="V3X-kA-gpK" secondAttribute="bottom" constant="15" id="hUR-uA-RMV"/>
+                            <constraint firstItem="Qep-mi-Hub" firstAttribute="centerX" secondItem="pj2-sA-jbd" secondAttribute="centerX" id="s5p-4J-keb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyStateImageView" destination="V3X-kA-gpK" id="bge-HQ-cKF"/>
+                        <outlet property="emptyStateLabel" destination="Qep-mi-Hub" id="fev-Wq-C68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqF-Pr-lvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971.0144927536232" y="263.83928571428572"/>
         </scene>
         <!--Messages-->
         <scene sceneID="fpW-wu-dZT">
@@ -48,6 +112,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="No comments" width="112" height="112"/>
+        <image name="No notifications" width="112" height="112"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
