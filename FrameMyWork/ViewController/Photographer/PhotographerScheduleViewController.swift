@@ -21,7 +21,5 @@ class PhotographerScheduleViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-    
 
 }
