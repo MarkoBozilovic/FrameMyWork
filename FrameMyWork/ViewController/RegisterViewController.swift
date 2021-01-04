@@ -7,13 +7,14 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Outlets
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var roleSegmentedControle: UISegmentedControl!
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextFIeld: UITextField!
     @IBOutlet var dateOfBirthDatePicker: UIDatePicker!
@@ -50,7 +51,37 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func registerPressed() {
+        let username = usernameTextField.text!
+        let password = passwordTextField.text!
+//        let email = emailTextField.text!
+        let firstName = firstNameTextField.text!
+        let lastName = lastNameTextFIeld.text!
         
+        let newUser = User(username: username,
+                           password: password,
+                           role: roleSegmentedControle.selectedSegmentIndex)
+        
+        switch newUser.role {
+        case .member:
+            let newMember = Member(firstName: firstName,
+                                   lastName: lastName,
+                                   profileImage: nil)
+            newUser.profile = newMember
+        case .photographer:
+            let newPhotographer = Photographer(firstName: firstName,
+                                               lastName: lastName,
+                                               profileImage: nil)
+            newUser.profile = newPhotographer
+        default:
+            assertionFailure("unknow user role")
+        }
+        
+        DataController.shared.registerUser(user: newUser) { (success) in
+            if success {
+                Model.shared.user = newUser
+                selectStoryboard(for: Model.shared.user!)
+            }
+        }
     }
     
     // MARK: - Functions
@@ -73,4 +104,24 @@ class RegisterViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case usernameTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            firstNameTextField.becomeFirstResponder()
+        case firstNameTextField:
+            lastNameTextFIeld.becomeFirstResponder()
+        default:
+            dismissKeyboard()
+        }
+        
+        return true
+    }
+    
 }

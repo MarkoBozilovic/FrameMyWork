@@ -14,3 +14,14 @@ func presentStoryboard(_ storyboard: String) {
     
     window?.rootViewController = vc
 }
+
+func selectStoryboard(for user: User) {
+    switch user.role {
+    case .member:
+        presentStoryboard("Member")
+    case .photographer:
+        presentStoryboard("Photographer")
+    default:
+        assertionFailure("selectStoryboard() error")
+    }
+}
