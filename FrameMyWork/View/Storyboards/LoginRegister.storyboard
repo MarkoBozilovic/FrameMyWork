@@ -154,6 +154,9 @@
                                                                 <rect key="frame" x="0.0" y="25.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" textContentType="username"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="17K-VW-vyq" id="8f0-wD-Myb"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -170,6 +173,9 @@
                                                                 <rect key="frame" x="0.0" y="25.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="17K-VW-vyq" id="PTa-zO-iVj"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -186,6 +192,9 @@
                                                                 <rect key="frame" x="0.0" y="25.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" textContentType="username"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="17K-VW-vyq" id="wKW-Eo-ppj"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -202,6 +211,9 @@
                                                                 <rect key="frame" x="0.0" y="25.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="name"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="17K-VW-vyq" id="vBH-qx-kvB"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -218,6 +230,9 @@
                                                                 <rect key="frame" x="0.0" y="25.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="family-name"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="17K-VW-vyq" id="h1y-sF-u4Z"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -231,7 +246,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-jm-otI">
-                                                                <rect key="frame" x="0.0" y="26" width="374" height="216"/>
+                                                                <rect key="frame" x="0.0" y="25.5" width="374" height="216"/>
                                                             </datePicker>
                                                         </subviews>
                                                     </stackView>
@@ -310,13 +325,14 @@
                     <navigationItem key="navigationItem" id="icQ-dK-qQE"/>
                     <connections>
                         <outlet property="dateOfBirthDatePicker" destination="Xch-jm-otI" id="GRK-h5-Bal"/>
+                        <outlet property="emailTextField" destination="0Kq-32-0sa" id="8x1-cX-7tE"/>
                         <outlet property="firstNameTextField" destination="E6f-gQ-q9H" id="eBD-g2-SJ4"/>
                         <outlet property="lastNameTextFIeld" destination="lJd-u1-CBy" id="aBg-x8-ijd"/>
                         <outlet property="passwordTextField" destination="rZK-Z9-r6y" id="nyy-hR-Jqw"/>
                         <outlet property="profileImageImageView" destination="kii-3J-UHD" id="kbC-hM-iht"/>
                         <outlet property="roleSegmentedControle" destination="scs-HP-UKs" id="MYM-up-YVh"/>
                         <outlet property="scrollView" destination="EVv-Py-utC" id="mul-Ys-1G6"/>
-                        <outlet property="usernameTextField" destination="0Kq-32-0sa" id="1H5-j5-mtS"/>
+                        <outlet property="usernameTextField" destination="peA-eG-5J7" id="jTg-iG-JAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofv-rA-NMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
