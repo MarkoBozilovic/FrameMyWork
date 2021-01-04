@@ -88,6 +88,7 @@ extension DataController {
     
     func registerUser (user: User,
                        completion: @escaping (Bool) -> Void) {
+        Model.shared.user = user
         switch user.role {
         case .member:
             saveMember(member: user.profile as! Member) { (success) in
