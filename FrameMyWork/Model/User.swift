@@ -40,11 +40,13 @@ enum UserRole {
     }
 }
 
-protocol UserProfile {
+protocol UserProfile: class {
     var id: Int? { get set }
     var firstName: String { get set }
     var lastName: String { get set }
     var profileImage: String? { get set }
+    
+    func convertToJson() -> Data
 }
 
 class User {

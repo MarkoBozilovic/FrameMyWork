@@ -89,62 +89,38 @@ extension DataController {
     func registerUser (user: User,
                        completion: @escaping (Bool) -> Void) {
         Model.shared.user = user
-        switch user.role {
-        case .member:
-            saveMember(member: user.profile as! Member) { (success) in
-                if success {
-                    self.executeRequest(endpoint: "users",
-                                   httpMethod: .post,
-                                   httpBody: user.convertToJson()) { (data, error) in
-                        guard error == nil else { return completion(false) }
-                        let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
-                        user.id = jsonData["id"] as? Int
-                        DispatchQueue.main.async {
-                            completion(true)
-                        }
+        
+        saveProfile(user.profile!, role: user.role) { (success) in
+            guard success else { return completion(false) }
+            self.executeRequest(endpoint: "users",
+                           httpMethod: .post,
+                           httpBody: user.convertToJson()) { (data, error) in
+                guard error == nil else { return completion(false) }
+                do {
+                    let jsonData = try JSONSerialization.jsonObject(with: data!,
+                    options: .allowFragments) as! [String: Any]
+                    user.id = jsonData["id"] as? Int
+                    DispatchQueue.main.async {
+                        completion(true)
                     }
+                } catch {
+                    assertionFailure("registerUser() error: data error")
                 }
             }
-        case .photographer:
-            savePhotographer(photographer: user.profile as! Photographer) { (success) in
-                if success {
-                    self.executeRequest(endpoint: "users",
-                                   httpMethod: .post,
-                                   httpBody: user.convertToJson()) { (data, error) in
-                        guard error == nil else { return completion(false) }
-                        let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
-                        user.id = jsonData["id"] as? Int
-                        DispatchQueue.main.async {
-                            completion(true)
-                        }
-                    }
-                }
-            }
-        default:
-            assertionFailure("registerUser(): unknow role")
         }
     }
     
-    func savePhotographer(photographer: Photographer,
-                          completion: @escaping (Bool) -> Void) {
-        executeRequest(endpoint: "photographers",
+    func saveProfile(_ profile: UserProfile,
+                     role: UserRole,
+                     completion: @escaping (Bool) -> Void) {
+        
+        let endpoint = role == .member ? "members" : "photographers"
+        executeRequest(endpoint: endpoint,
                        httpMethod: .post,
-                       httpBody: photographer.convertToJson()) { (data, error) in
+                       httpBody: profile.convertToJson()) { (data, error) in
             guard error == nil else { return completion(false) }
             let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
-            photographer.id = jsonData["id"] as? Int
-            completion(true)
-        }
-    }
-    
-    func saveMember(member: Member,
-                    completion: @escaping (Bool) -> Void) {
-        executeRequest(endpoint: "members",
-                       httpMethod: .post,
-                       httpBody: member.convertToJson()) { (data, error) in
-            guard error == nil else { return completion(false) }
-            let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
-            member.id = jsonData["id"] as? Int
+            profile.id = jsonData["id"] as? Int
             completion(true)
         }
     }

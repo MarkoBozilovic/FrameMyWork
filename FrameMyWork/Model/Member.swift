@@ -29,9 +29,7 @@ class Member: UserProfile {
           profileImage: String?) {
         self.firstName = firstName
         self.lastName = lastName
-        if let profileImage = profileImage {
-            self.profileImage = profileImage
-        }
+        self.profileImage = profileImage
     }
     
     // MARK: - Functions
