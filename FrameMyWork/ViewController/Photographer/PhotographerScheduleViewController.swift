@@ -29,11 +29,6 @@ class PhotographerScheduleViewController: UIViewController,
         super.viewDidLoad()
 
         setupOutlets()
-        
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        collectionView!.collectionViewLayout = layout
     }
     
     // MARK: - Actions
@@ -59,6 +54,12 @@ class PhotographerScheduleViewController: UIViewController,
         
         // setup month and year label
         monthYearLabel.text = "\(FMWCalendar.shared.getCurrentMonth()) \(FMWCalendar.shared.getCurrentYear())"
+
+        // setup collectionView layout
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
     }
     
     func updateDataSource() {
