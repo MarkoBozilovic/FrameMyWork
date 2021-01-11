@@ -54,7 +54,7 @@ class PhotographerScheduleViewController: UIViewController,
         
         // setup month and year label
         monthYearLabel.text = "\(FMWCalendar.shared.getCurrentMonth()) \(FMWCalendar.shared.getCurrentYear())"
-        
+
         // setup collectionView layout
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
