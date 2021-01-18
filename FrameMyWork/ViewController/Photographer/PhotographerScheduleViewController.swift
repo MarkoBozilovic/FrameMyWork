@@ -21,7 +21,7 @@ class PhotographerScheduleViewController: UIViewController,
     // MARK: - Properties
     
     let photographer = Model.shared.user!.profile as! Photographer
-    var dataSource = FMWCalendar.shared.getArrayOfDaysInMonth()
+    let calendar = FMWCalendar.shared
 
     // MARK: - LifeCycleFunctions
     
@@ -34,14 +34,18 @@ class PhotographerScheduleViewController: UIViewController,
     // MARK: - Actions
     
     @IBAction func nextPressed() {
-        monthYearLabel.text = "\(FMWCalendar.shared.getNextMonth()) \(FMWCalendar.shared.getCurrentYear())"
-        updateDataSource()
-        
+        calendar.nextMonth()
+        updateUI()
     }
     
     @IBAction func previousPressed() {
-        monthYearLabel.text = "\(FMWCalendar.shared.getPreviousMonth()) \(FMWCalendar.shared.getCurrentYear())"
-        updateDataSource()
+        calendar.previousMonth()
+        updateUI()
+    }
+    
+    func updateUI() {
+        monthYearLabel.text = calendar.currentMonth
+        collectionView.reloadData()
     }
     
     // MARK: - Functions
@@ -49,22 +53,19 @@ class PhotographerScheduleViewController: UIViewController,
     func setupOutlets() {
         // setup weekday labels
         for index in weekdayCollectionLabel.indices {
-            weekdayCollectionLabel[index].text = FMWCalendar.calendar.shortWeekdaySymbols[index]
+            weekdayCollectionLabel[index].text = calendar.weekdaySymbols[index]
         }
         
         // setup month and year label
-        monthYearLabel.text = "\(FMWCalendar.shared.getCurrentMonth()) \(FMWCalendar.shared.getCurrentYear())"
+        monthYearLabel.text = calendar.currentMonth
 
         // setup collectionView layout
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
+        layout.itemSize = CGSize(width: view.bounds.width / 7, height: view.bounds.width / 7)
+        layout.sectionInset = .zero
         collectionView!.collectionViewLayout = layout
-    }
-    
-    func updateDataSource() {
-        dataSource = FMWCalendar.shared.getArrayOfDaysInMonth()
-        collectionView.reloadData()
     }
     
     // MARK: - UICollectionViewDataSource
@@ -72,7 +73,7 @@ class PhotographerScheduleViewController: UIViewController,
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        return dataSource.count
+        calendar.arrayOfDays.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -80,18 +81,34 @@ class PhotographerScheduleViewController: UIViewController,
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dateIdentifier",
                                                       for: indexPath) as! DateCollectionViewCell
-        cell.dateLabel.text = "\(dataSource[indexPath.row])"
-        if cell.dateLabel.text == "" {
+        
+        let calendarDate = calendar.arrayOfDays[indexPath.row]
+        if calendarDate.date != nil {
+            cell.dateLabel.text = calendar.formatDate(calendarDate.date!)
+            cell.isHidden = false
+            cell.isUserInteractionEnabled = true
+        } else {
+            cell.isHidden = true
             cell.isUserInteractionEnabled = false
         }
+        
+        if calendarDate.schedule != nil {
+            cell.backgroundColor = .red
+            cell.dateLabel.textColor = .white
+            cell.setNeedsDisplay()
+        } else {
+            cell.backgroundColor = .white
+            cell.dateLabel.textColor = .black
+            cell.setNeedsDisplay()
+        }
+        
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.red
+        
     }
     
     func collectionView(_ collectionView: UICollectionView,

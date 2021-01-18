@@ -39,6 +39,8 @@
 		8FE3B9ED258FE63D008BB989 /* PhotographerScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9EC258FE63D008BB989 /* PhotographerScheduleViewController.swift */; };
 		8FE3B9F0258FE656008BB989 /* PhotographerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9EF258FE656008BB989 /* PhotographerProfileViewController.swift */; };
 		8FE3B9F3258FE66C008BB989 /* PhotographerMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9F2258FE66C008BB989 /* PhotographerMessagesViewController.swift */; };
+		8FE4D20925AF309E0030A98C /* FMWDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4D20825AF309E0030A98C /* FMWDate.swift */; };
+		8FE4D20C25AF59B40030A98C /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4D20B25AF59B40030A98C /* Schedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		8FE3B9EC258FE63D008BB989 /* PhotographerScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerScheduleViewController.swift; sourceTree = "<group>"; };
 		8FE3B9EF258FE656008BB989 /* PhotographerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerProfileViewController.swift; sourceTree = "<group>"; };
 		8FE3B9F2258FE66C008BB989 /* PhotographerMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerMessagesViewController.swift; sourceTree = "<group>"; };
+		8FE4D20825AF309E0030A98C /* FMWDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMWDate.swift; sourceTree = "<group>"; };
+		8FE4D20B25AF59B40030A98C /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 				8FC3D07E2583A6FA0041E575 /* Photographer.swift */,
 				8FC3D0812583A70F0041E575 /* Member.swift */,
 				8F0FBA3F25AB8E2A00A542A0 /* FMWCalendar.swift */,
+				8FE4D20825AF309E0030A98C /* FMWDate.swift */,
+				8FE4D20B25AF59B40030A98C /* Schedule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				8F8AE0D025A0A05B007B3AC0 /* NotificationViewController.swift in Sources */,
 				8FC3D0822583A70F0041E575 /* Member.swift in Sources */,
 				8FC3D0852583A9850041E575 /* Model.swift in Sources */,
+				8FE4D20925AF309E0030A98C /* FMWDate.swift in Sources */,
 				8F8AE0EA25A0AD46007B3AC0 /* MemberMessagesViewController.swift in Sources */,
 				8F0FBA4425AB9D5500A542A0 /* DateCollectionViewCell.swift in Sources */,
 				8FE3B9ED258FE63D008BB989 /* PhotographerScheduleViewController.swift in Sources */,
@@ -331,6 +338,7 @@
 				8FE3B9E0258FA6A4008BB989 /* Utils.swift in Sources */,
 				8F76B210257BC75C00013EDF /* AppDelegate.swift in Sources */,
 				8F76B212257BC75C00013EDF /* SceneDelegate.swift in Sources */,
+				8FE4D20C25AF59B40030A98C /* Schedule.swift in Sources */,
 				8F38AB91257DF0B100BE9A41 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

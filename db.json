@@ -39,6 +39,16 @@
             "lastName": "Bozilovic",
             "profileImage": ""
         }
+    ],
+    "schedules": [
+        {
+            "id": 0,
+            "memberId": 0,
+            "photographerId": 0,
+            "date": "13.01.2021",
+            "title": "test",
+            "details": "bla bla bla bla"
+        }
     ]
 
 }

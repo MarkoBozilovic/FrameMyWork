@@ -11,4 +11,11 @@ class DateCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     
     @IBOutlet var dateLabel: UILabel!
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        self.layer.cornerRadius = 25
+        self.backgroundColor = UIColor.red
+    }
 }
