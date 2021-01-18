@@ -124,4 +124,19 @@ extension DataController {
             completion(true)
         }
     }
+    
+    func getSchedules() {
+        let endpoint = "schedules"
+        
+        executeRequest(endpoint: endpoint,
+                       httpMethod: .get) { (data, error) in
+            guard error == nil else { return }
+            let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:Any]]
+            
+            let schedules = jsonData.map{ Schedule(dict: $0) }
+            Model.shared.schedules = schedules
+            print(schedules)
+        }
+        
+    }
 }
