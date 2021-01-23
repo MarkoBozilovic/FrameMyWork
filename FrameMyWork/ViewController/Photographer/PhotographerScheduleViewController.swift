@@ -108,7 +108,10 @@ class PhotographerScheduleViewController: UIViewController,
     
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        
+        let date = calendar.arrayOfDays[indexPath.row]
+        if date.schedule != nil {
+            performSegue(withIdentifier: "scheduleIdentifier", sender: indexPath.row)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -116,6 +119,14 @@ class PhotographerScheduleViewController: UIViewController,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return 20
+    }
+    
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "scheduleIdentifier" else { return }
+        let destinationVC = segue.destination as! PhotographerScheduleDetailsViewController
+        destinationVC.schedule = calendar.arrayOfDays[sender as! Int].schedule
     }
 
 }

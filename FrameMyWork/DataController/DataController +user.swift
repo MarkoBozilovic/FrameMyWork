@@ -139,4 +139,19 @@ extension DataController {
         }
         
     }
+    
+    func getMember(by id: Int, completion: @escaping (Member?) -> Void) {
+        let endpoint = "members/?id=\(id)"
+        
+        executeRequest(endpoint: endpoint,
+                       httpMethod: .get) { (data, error) in
+            guard error == nil else { return completion(nil) }
+            let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:Any]]
+            if let dict = jsonData.first {
+                let member = Member(dict)
+                completion(member)
+            }
+            completion(nil)
+        }
+    }
 }
