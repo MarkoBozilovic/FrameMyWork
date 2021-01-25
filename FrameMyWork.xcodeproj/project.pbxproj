@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		2CE1744725B7BB6800E88065 /* PhotographerGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1744625B7BB6800E88065 /* PhotographerGalleryViewController.swift */; };
 		2CE1744A25B7BB7C00E88065 /* PhotographerReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1744925B7BB7C00E88065 /* PhotographerReviewViewController.swift */; };
+<<<<<<< HEAD
+		2CE1744E25BA2CB600E88065 /* LikedPhotographerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1744D25BA2CB600E88065 /* LikedPhotographerTableViewCell.swift */; };
+=======
 		8F0FBA4025AB8E2A00A542A0 /* FMWCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0FBA3F25AB8E2A00A542A0 /* FMWCalendar.swift */; };
 		8F0FBA4425AB9D5500A542A0 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0FBA4325AB9D5500A542A0 /* DateCollectionViewCell.swift */; };
+>>>>>>> c0ddae62d73fd20867588a57bbc102027eb1ee43
 		8F38AB83257C998A00BE9A41 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38AB82257C998A00BE9A41 /* DataController.swift */; };
 		8F38AB88257CA8DA00BE9A41 /* ValidationService +login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38AB87257CA8DA00BE9A41 /* ValidationService +login.swift */; };
 		8F38AB8E257D837900BE9A41 /* DataController +user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38AB8D257D837900BE9A41 /* DataController +user.swift */; };
@@ -50,10 +54,14 @@
 
 		2CE1744625B7BB6800E88065 /* PhotographerGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerGalleryViewController.swift; sourceTree = "<group>"; };
 		2CE1744925B7BB7C00E88065 /* PhotographerReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerReviewViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		2CE1744D25BA2CB600E88065 /* LikedPhotographerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotographerTableViewCell.swift; sourceTree = "<group>"; };
+=======
 
 		8F0FBA3F25AB8E2A00A542A0 /* FMWCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMWCalendar.swift; sourceTree = "<group>"; };
 		8F0FBA4325AB9D5500A542A0 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 
+>>>>>>> c0ddae62d73fd20867588a57bbc102027eb1ee43
 		8F38AB82257C998A00BE9A41 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8F38AB87257CA8DA00BE9A41 /* ValidationService +login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValidationService +login.swift"; sourceTree = "<group>"; };
 		8F38AB8D257D837900BE9A41 /* DataController +user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController +user.swift"; sourceTree = "<group>"; };
@@ -102,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CE1744C25BA2C8100E88065 /* MemberProfile */ = {
+			isa = PBXGroup;
+			children = (
+				8F8AE0EC25A0AD59007B3AC0 /* MemberProfileViewController.swift */,
+				2CE1744D25BA2CB600E88065 /* LikedPhotographerTableViewCell.swift */,
+			);
+			path = MemberProfile;
+			sourceTree = "<group>";
+		};
 		8F38AB81257C994800BE9A41 /* DataController */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +231,7 @@
 			children = (
 				8F8AE0E625A0AD26007B3AC0 /* MemberSearchViewController.swift */,
 				8F8AE0E925A0AD46007B3AC0 /* MemberMessagesViewController.swift */,
-				8F8AE0EC25A0AD59007B3AC0 /* MemberProfileViewController.swift */,
+				2CE1744C25BA2C8100E88065 /* MemberProfile */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -333,6 +350,7 @@
 				8FC3D07F2583A6FA0041E575 /* Photographer.swift in Sources */,
 				8F8AE0ED25A0AD59007B3AC0 /* MemberProfileViewController.swift in Sources */,
 				8F76B232257BE07F00013EDF /* LoginViewController.swift in Sources */,
+				2CE1744E25BA2CB600E88065 /* LikedPhotographerTableViewCell.swift in Sources */,
 				8F8AE0F425A0C7EC007B3AC0 /* RegisterViewController.swift in Sources */,
 				8FE3B9F0258FE656008BB989 /* PhotographerProfileViewController.swift in Sources */,
 				8F38AB8E257D837900BE9A41 /* DataController +user.swift in Sources */,
