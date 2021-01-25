@@ -9,19 +9,21 @@ import UIKit
 
 class MemberProfileViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    
+    
     @IBOutlet var profileImage: UIImageView!
-    @IBOutlet var aboutTextView: UITextView!
+    @IBOutlet var memberNameLabel: UILabel!
+    @IBOutlet var memberTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.aboutTextView.delegate = self
         // Do any additional setup after loading the view.
     }
     
     //MARK: - Actions
     
-    @IBAction func editImagePressed() {
+    @IBAction func changeImagePressed() {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
@@ -31,18 +33,6 @@ class MemberProfileViewController: UIViewController, UITextViewDelegate, UIImage
     
     //MARK: - Functions
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        self.aboutTextView.resignFirstResponder()
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        self.aboutTextView.backgroundColor = UIColor.lightGray
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        self.aboutTextView.backgroundColor = UIColor.white
-    }
     
     //UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -58,4 +48,20 @@ class MemberProfileViewController: UIViewController, UITextViewDelegate, UIImage
         picker.dismiss(animated: true, completion: nil)
     }
 
+}
+
+// MARK: TableView
+
+extension MemberProfileViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LikedPhotographerCellIdentifier", for: indexPath)
+        return cell
+    }
+    
+    
+    
 }
