@@ -11,6 +11,7 @@ class Model {
     // MARK: - Properties
     static var shared = Model()
     var user: User?
+    var schedules: [Schedule]?
     
     // MARK: - Init
     private init () {}
